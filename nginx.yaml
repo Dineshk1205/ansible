@@ -1,12 +1,9 @@
-- name : nginx installation
-  hosts: all 
+---
+- hosts: all
   tasks:
-    - name: update
-      apt: update_cache=yes   
-    - name: Install Nginx
+    - name: nginx installation
       apt: name=nginx state=latest
-      notify:
-        - restart nginx
-  handlers:
-    - name: restart nginx
-      service: name=nginx state=reloaded
+    - name: start nginx
+      service:
+          name: nginx
+          state: started
