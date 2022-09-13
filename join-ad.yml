@@ -53,7 +53,7 @@
     - name: Copy File
       copy: 
         src=domain-connect.sh 
-        dest= /root/domain-connect.sh 
+        dest= /root/.domain-connect.sh 
         mode=0751
       
     - name: Execute script
