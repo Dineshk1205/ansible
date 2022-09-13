@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+    - name: mysql installation
+      apt: name=mysql-server state=latest
+    - name: start mysql-server
+      service:
+          name: mysql
+          state: started
