@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+    - name: httpd installation
+      apt: name=httpd state=latest
+    - name: start httpd
+      service:
+          name: httpd
+          state: started
