@@ -1,9 +1,9 @@
 ---
 - hosts: all
   tasks:
-    - name: httpd installation
-      apt: name=httpd state=latest
-    - name: start httpd
+    - name: mariadb installation
+      apt: name=mariadb-server state=latest
+    - name: start mariadb-server
       service:
-          name: httpd
+          name: mariadb
           state: started
